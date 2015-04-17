@@ -15,18 +15,22 @@ module.exports = function(app) {
 
 	// api ---------------------------------------------------------------------
 	// get all todos
-	app.get('/api/todos', function(req, res) {
+	app.get('/api/users', function(req, res) {
 
 		// use mongoose to get all todos in the database
 		getTodos(res);
 	});
 
 	// create todo and send back all todos after creation
-	app.post('/api/todos', function(req, res) {
+	app.post('/api/users', function(req, res) {
 
 		// create a todo, information comes from AJAX request from Angular
 		Todo.create({
-			text : req.body.text,
+			name : req.body.name,
+			email : req.body.email,
+			location : req.body.location,
+			reason : req.body.reason,
+			message: req.body.message,
 			done : false
 		}, function(err, todo) {
 			if (err)
@@ -38,8 +42,9 @@ module.exports = function(app) {
 
 	});
 
+
 	// delete a todo
-	app.delete('/api/todos/:todo_id', function(req, res) {
+	app.delete('/api/users/:todo_id', function(req, res) {
 		Todo.remove({
 			_id : req.params.todo_id
 		}, function(err, todo) {

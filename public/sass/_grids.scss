@@ -1,0 +1,149 @@
+// Requirements
+// ============
+@import "compass/css3";
+@import "susy";
+$navy-blue: #051153;
+$susy: ( flow: ltr, math: fluid, // static requires column-width
+//column-width: false, //# or % | auto
+container-position: center, // left, center, it is the padding
+//gutter-position: after, //before after | split | inside | inside-static
+columns: 12, gutters: 1/4, //Space Between Elements
+global-box-sizing: border-box, debug: (image: show-columns, output: overlay, toggle: top left));
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    @include container;
+}
+
+header {
+    @include span(full);
+}
+
+footer {
+    @include span(full);
+    height: 100px;
+    background-color: $navy-blue;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (min-width: 670px){
+.logo-row {
+    @include span(12);
+    > img {
+        @include span(4 at 5 isolate);
+        height: 500px;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 669px){
+.logo-row {
+    @include span(12);
+    > img {
+        @include span(4 at 5 isolate);
+        height: 300px;
+        }
+    }
+}
+
+.buttons {
+    @include display-flex;
+    @include flex-flow(row wrap);
+    > .links {
+        @include flex-grow(1);
+    }
+}
+
+.wrap {
+    @include span(full);
+}
+
+
+.form-header {
+    @include span(8 at 4 isolate);
+}
+
+.form-wrapper {
+    @include span(full);
+    form {
+        font-size: 1.2em;
+        @extend .roundedborder;
+        @include span(10 at 2 isolate);
+        padding: 2em;
+        margin-bottom: 15px;
+    }
+    .button-row {
+        @include span(4 at 5 isolate);
+    }
+}
+
+.form-wrapper > h2, p {
+    text-align: center;
+    padding: 1.125em;
+}
+
+.gallery {
+    @include clearfix;
+    .gallery-item {
+        @include gallery(2 of 8);
+    }
+}
+
+.main-content {
+    @include span(10 at 2 isolate);
+}
+
+.mc-slider {
+    @include span(6 at 4 isolate);
+}
+
+//Blog Assets
+.blog-wrap {
+    @include span(9);
+    .blog-sidebar {
+        @include span(3 last);
+    }
+}
+
+.about-box {
+    @include span(6 at 4 isolate);
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+.about-hr {
+    width: 90%;    
+}
+
+.bottom_wrapper {
+    @include span(full);
+    .centered_div {
+        @include span(6 at 4 isolate);
+        margin-top: 1.25em;
+    }
+}
+
+.panel-wrap {
+    @include span(10 at 2 isolate);
+    text-align: center;
+     .panel {
+        @include clearfix;
+         .panel-img {
+            @include span(2);
+            .panel-text {
+                @include span(8);
+            }
+        }
+    }
+}
+
+
+.button {
+    height: 50px;
+}
+

@@ -1,0 +1,108 @@
+$base-font-size: 16px;
+//Line height should be base-font-s
+$base-line-height: 24px;
+$font-one: "Merriweather";
+$title-font: "Chapparal-Pro-Display";
+$footer-font : "Expo-Serif-Pro";
+$light: 300;
+$normal: 400;
+$bold : 700;
+$italic : italic;
+$text-shadow: 1px -2px 0px rgba(150, 150, 150, 1);
+body {
+    font-family: $font-one;
+}
+h1 {
+    @include adjust-font-size-to(36px);
+    //Make the bottom margin 1 line-height / 36
+    margin-top: rhythm(1, 36px);
+    font-weight: $bold;
+}
+h2 {
+    @include adjust-font-size-to(24px);
+    margin-top: rhythm(1, 24px);
+    font-weight: $bold;
+    .main-heading {
+        text-align: center;
+    }
+}
+
+.panel-heading {
+    @include adjust-font-size-to(24px);
+    margin-bottom: rhythm(1, 24px);
+    font-weight: $bold;
+    text-align: center;
+}
+
+h1.blue-head {
+    color: #2b94c2;
+}
+h3 {
+    @include adjust-font-size-to(21px);
+    font-weight: $light;
+    center {
+        text-align: center
+    }
+}
+p {
+    @include adjust-font-size-to(16px);
+    margin-bottom: rhythm(1, 16px);
+    font-weight: $light;
+    text-align: justify;
+    > em {
+        font-style: $italic;
+    }
+}
+
+
+.about-intro {
+    font-style: $italic;
+    text-align: justify;
+    padding: 1em;
+}
+
+.lr-heading {
+    text-align: center;
+}
+
+.header-text {
+    @include adjust-font-size-to(18px);
+    margin-bottom: rhythm(1, 18px);
+}
+.quote-text {
+    @include adjust-font-size-to(22px);
+    margin-top: rhythm(1, 22px);
+    margin-bottom: 5px;
+    text-align: center;
+    color: white;
+}
+.top-nav > li a {
+    @include adjust-font-size-to(18px);
+    padding-right: rhythm(1, 18px);
+}
+
+.button {
+    font-family: $font-one;
+    font-weight: $bold;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.form-wrapper {
+ h2 {
+    text-align: center;
+    }
+}
+
+.main-heading {
+    text-align: center;
+}
+
+.footer-text {
+    @include adjust-font-size-to(16px);
+    padding-top: rhythm(1, 16px);
+    text-align: center;
+    text-weight: $bold;
+}
