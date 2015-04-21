@@ -4,16 +4,30 @@ var app = angular.module('app', ['firebase',
     ])
 
 
-app.controller('MongooseController', ['$scope', '$http', 'Todos', function($scope, $http, Todos) {
+app.factory('Users', ['$http', function($http) {
+    return {
+        get: function() {
+            return $http.get('/api/users');
+        },
+        create: function(todoData) {
+            return $http.post('/api/users', todoData);
+        },
+        delete: function(id) {
+            return $http.delete('/api/users/' + id);
+        }
+    };
+}]);
+
+app.controller('MongooseController', ['$scope', '$http', 'Users', function($scope, $http, Users) {
     $scope.formData = {};
     $scope.loading = true;
 
     // GET =====================================================================
-    // when landing on the page, get all todos and show them
-    // use the service to get all the todos
-    Todos.get()
+    // when landing on the page, get all Users and show them
+    // use the service to get all the Users
+    Users.get()
         .success(function(data) {
-            $scope.todos = data;
+            $scope.Users = data;
             $scope.loading = false;
         });
 
@@ -27,32 +41,19 @@ app.controller('MongooseController', ['$scope', '$http', 'Todos', function($scop
             $scope.loading = true;
 
             // call the create function from our service (returns a promise object)
-            Todos.create($scope.formData)
+            Users.create($scope.formData)
 
-            // if successful creation, call our get function to get all the new todos
+            // if successful creation, call our get function to get all the new Users
             .success(function(data) {
                 $scope.loading = false;
                 $scope.formData = {}; // clear the form so our user is ready to enter another
-                $scope.todos = data; // assign our new list of todos
+                $scope.Users = data; // assign our new list of Users
             });
         }
     };
 }]);
 
 
-app.factory('Todos', ['$http', function($http) {
-    return {
-        get: function() {
-            return $http.get('/api/users');
-        },
-        create: function(todoData) {
-            return $http.post('/api/users', todoData);
-        },
-        delete: function(id) {
-            return $http.delete('/api/users/' + id);
-        }
-    };
-}]);
 
 
 

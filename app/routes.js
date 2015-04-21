@@ -1,57 +1,57 @@
-var Todo = require('./models/todo');
+var User = require('./models/user');
 
-function getTodos(res){
-	Todo.find(function(err, todos) {
+function getUsers(res){
+	User.find(function(err, Users) {
 
 			// if there is an error retrieving, send the error. nothing after res.send(err) will execute
 			if (err)
 				res.send(err)
 
-			res.json(todos); // return all todos in JSON format
+			res.json(Users); // return all Users in JSON format
 		});
 };
 
 module.exports = function(app) {
 
 	// api ---------------------------------------------------------------------
-	// get all todos
+	// get all Users
 	app.get('/api/users', function(req, res) {
 
-		// use mongoose to get all todos in the database
-		getTodos(res);
+		// use mongoose to get all Users in the database
+		getUsers(res);
 	});
 
-	// create todo and send back all todos after creation
+	// create User and send back all Users after creation
 	app.post('/api/users', function(req, res) {
 
-		// create a todo, information comes from AJAX request from Angular
-		Todo.create({
+		// create a User, information comes from AJAX request from Angular
+		User.create({
 			name : req.body.name,
 			email : req.body.email,
 			location : req.body.location,
 			reason : req.body.reason,
 			message: req.body.message,
 			done : false
-		}, function(err, todo) {
+		}, function(err, User) {
 			if (err)
 				res.send(err);
 
-			// get and return all the todos after you create another
-			getTodos(res);
+			// get and return all the Users after you create another
+			getUsers(res);
 		});
 
 	});
 
 
-	// delete a todo
-	app.delete('/api/users/:todo_id', function(req, res) {
-		Todo.remove({
-			_id : req.params.todo_id
-		}, function(err, todo) {
+	// delete a User
+	app.delete('/api/users/:user_id', function(req, res) {
+		User.remove({
+			_id : req.params.user_id
+		}, function(err, user) {
 			if (err)
 				res.send(err);
 
-			getTodos(res);
+			getUsers(res);
 		});
 	});
 
