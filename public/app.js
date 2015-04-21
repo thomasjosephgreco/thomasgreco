@@ -21,7 +21,6 @@ angular.module('ui.router.config', ['ui.router'])
                         templateUrl: './templates/nav.html',
                         controller: 'NavController'
                     },
-
                     'Main-Content@home': {
                         templateUrl: './templates/main-content.html',
                         controller: 'SliderController'
@@ -69,6 +68,28 @@ angular.module('ui.router.config', ['ui.router'])
                         controller: 'MongooseController'
                     },
                     'Footer@contact': {
+                        templateUrl: './templates/footer.html'
+                    }
+                }
+            })
+            .state('skills', {
+                url: '/skills',
+                views: {
+                    '': {
+                        templateUrl: './templates/skills-main.html'
+                    },
+                    'Header@skills': {
+                        templateUrl: './templates/nav.html',
+                        controller: 'NavController'
+                    },
+                    'Body@skills': {
+                        templateUrl: './templates/skills-body.html',
+                    },
+                    'Sidebar@skills': {
+                        templateUrl: './templates/skills-side.html',
+                        controller: 'MongooseController'
+                    },
+                    'Footer@skills': {
                         templateUrl: './templates/footer.html'
                     }
                 }

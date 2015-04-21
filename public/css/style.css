@@ -292,6 +292,24 @@ header {
 }
 
 /* line 26, ../sass/_grids.scss */
+.skills-layout {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 28, ../sass/_grids.scss */
+.skills-layout .skills-sidebar {
+  @inclue span(4 of 12);
+}
+/* line 30, ../sass/_grids.scss */
+.skills-layout .skills-sidebar .skills-body {
+  width: 66.10169492%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 37, ../sass/_grids.scss */
 footer {
   width: 100%;
   float: left;
@@ -304,14 +322,14 @@ footer {
 }
 
 @media screen and (min-width: 670px) {
-  /* line 35, ../sass/_grids.scss */
+  /* line 46, ../sass/_grids.scss */
   .logo-row {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 37, ../sass/_grids.scss */
+  /* line 48, ../sass/_grids.scss */
   .logo-row > img {
     width: 32.20338983%;
     float: left;
@@ -321,14 +339,14 @@ footer {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 669px) {
-  /* line 45, ../sass/_grids.scss */
+  /* line 56, ../sass/_grids.scss */
   .logo-row {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 47, ../sass/_grids.scss */
+  /* line 58, ../sass/_grids.scss */
   .logo-row > img {
     width: 32.20338983%;
     float: left;
@@ -337,20 +355,20 @@ footer {
     height: 300px;
   }
 }
-/* line 54, ../sass/_grids.scss */
+/* line 65, ../sass/_grids.scss */
 .buttons {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-/* line 57, ../sass/_grids.scss */
+/* line 68, ../sass/_grids.scss */
 .buttons > .links {
   -webkit-flex-grow: 1;
   flex-grow: 1;
 }
 
-/* line 62, ../sass/_grids.scss */
+/* line 73, ../sass/_grids.scss */
 .wrap {
   width: 100%;
   float: left;
@@ -358,7 +376,7 @@ footer {
   margin-right: 0;
 }
 
-/* line 67, ../sass/_grids.scss */
+/* line 78, ../sass/_grids.scss */
 .form-header {
   width: 66.10169492%;
   float: left;
@@ -366,14 +384,14 @@ footer {
   margin-right: -100%;
 }
 
-/* line 71, ../sass/_grids.scss */
+/* line 82, ../sass/_grids.scss */
 .form-wrapper {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
 }
-/* line 73, ../sass/_grids.scss */
+/* line 84, ../sass/_grids.scss */
 .form-wrapper form {
   font-size: 1.2em;
   width: 83.05084746%;
@@ -383,7 +401,7 @@ footer {
   padding: 2em;
   margin-bottom: 15px;
 }
-/* line 80, ../sass/_grids.scss */
+/* line 91, ../sass/_grids.scss */
 .form-wrapper .button-row {
   width: 32.20338983%;
   float: left;
@@ -391,18 +409,18 @@ footer {
   margin-right: -100%;
 }
 
-/* line 85, ../sass/_grids.scss */
+/* line 96, ../sass/_grids.scss */
 .form-wrapper > h2, p {
   text-align: center;
   padding: 1.125em;
 }
 
-/* line 90, ../sass/_grids.scss */
+/* line 101, ../sass/_grids.scss */
 .gallery {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 92, ../sass/_grids.scss */
+/* line 103, ../sass/_grids.scss */
 .gallery .gallery-item {
   width: 23.07692308%;
   float: left;
@@ -433,7 +451,7 @@ footer {
   clear: none;
 }
 
-/* line 97, ../sass/_grids.scss */
+/* line 108, ../sass/_grids.scss */
 .main-content {
   width: 83.05084746%;
   float: left;
@@ -441,7 +459,7 @@ footer {
   margin-right: -100%;
 }
 
-/* line 101, ../sass/_grids.scss */
+/* line 112, ../sass/_grids.scss */
 .mc-slider {
   width: 49.15254237%;
   float: left;
@@ -449,20 +467,20 @@ footer {
   margin-right: -100%;
 }
 
-/* line 106, ../sass/_grids.scss */
+/* line 117, ../sass/_grids.scss */
 .blog-wrap {
   width: 74.57627119%;
   float: left;
   margin-right: 1.69491525%;
 }
-/* line 108, ../sass/_grids.scss */
+/* line 119, ../sass/_grids.scss */
 .blog-wrap .blog-sidebar {
   width: 23.72881356%;
   float: right;
   margin-right: 0;
 }
 
-/* line 113, ../sass/_grids.scss */
+/* line 124, ../sass/_grids.scss */
 .about-box {
   width: 49.15254237%;
   float: left;
@@ -472,19 +490,19 @@ footer {
   padding: 20px;
 }
 
-/* line 119, ../sass/_grids.scss */
+/* line 130, ../sass/_grids.scss */
 .about-hr {
   width: 90%;
 }
 
-/* line 123, ../sass/_grids.scss */
+/* line 134, ../sass/_grids.scss */
 .bottom_wrapper {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
 }
-/* line 125, ../sass/_grids.scss */
+/* line 136, ../sass/_grids.scss */
 .bottom_wrapper .centered_div {
   width: 49.15254237%;
   float: left;
@@ -493,7 +511,7 @@ footer {
   margin-top: 1.25em;
 }
 
-/* line 131, ../sass/_grids.scss */
+/* line 142, ../sass/_grids.scss */
 .panel-wrap {
   width: 83.05084746%;
   float: left;
@@ -501,25 +519,25 @@ footer {
   margin-right: -100%;
   text-align: center;
 }
-/* line 134, ../sass/_grids.scss */
+/* line 145, ../sass/_grids.scss */
 .panel-wrap .panel {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 136, ../sass/_grids.scss */
+/* line 147, ../sass/_grids.scss */
 .panel-wrap .panel .panel-img {
   width: 15.25423729%;
   float: left;
   margin-right: 1.69491525%;
 }
-/* line 138, ../sass/_grids.scss */
+/* line 149, ../sass/_grids.scss */
 .panel-wrap .panel .panel-img .panel-text {
   width: 66.10169492%;
   float: left;
   margin-right: 1.69491525%;
 }
 
-/* line 146, ../sass/_grids.scss */
+/* line 157, ../sass/_grids.scss */
 .button {
   height: 50px;
 }

@@ -23,6 +23,17 @@ header {
     @include span(full);
 }
 
+.skills-layout {
+    @include span(full);
+    .skills-sidebar {
+        @inclue span(4 of 12);
+        .skills-body {
+            @include span(8 last);
+        }
+    }
+}
+
+
 footer {
     @include span(full);
     height: 100px;
