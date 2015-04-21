@@ -1,125 +1,9 @@
 var app = angular.module('app', ['firebase',
     'ui.router.config',
-    'angular-flexslider',
-    'angularModalService',
-    'ngResource',
-])
+    'angular-flexslider'
+    ])
 
 
-angular.module('ui.router.config', ['ui.router'])
-    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
-
-        $urlRouterProvider.otherwise('/');
-        $stateProvider
-            .state('home', {
-                url: '/',
-                views: {
-                    '': {
-                        templateUrl: './templates/home.html'
-                    },
-                    'Header@home': {
-                        templateUrl: './templates/nav.html',
-                        controller: 'NavController'
-                    },
-                    'Main-Content@home': {
-                        templateUrl: './templates/main-content.html',
-                        controller: 'SliderController'
-                    },
-                    'Footer@home': {
-                        templateUrl: './templates/footer.html'
-                    }
-                }
-            })
-            .state('about', {
-                url: '/this-app',
-                views: {
-                    '': {
-                        templateUrl: './templates/about.html'
-                    },
-                    'Header@about': {
-                        templateUrl: './templates/nav.html',
-                        controller: 'NavController'
-                    },
-
-                    'Top-Content@about': {
-                        templateUrl: './templates/top-content.html'
-                    },
-                    'Bottom-Content@about': {
-                        templateUrl: './templates/bottom-content.html'
-                    },
-                    'Footer@about': {
-                        templateUrl: './templates/footer.html'
-                    }
-                }
-            })
-            .state('contact', {
-                url: '/contact',
-                views: {
-                    '': {
-                        templateUrl: './templates/contact.html'
-                    },
-                    'Header@contact': {
-                        templateUrl: './templates/nav.html',
-                        controller: 'NavController'
-                    },
-
-                    'Contact-Form@contact': {
-                        templateUrl: './templates/mongo-form.html',
-                        controller: 'MongooseController'
-                    },
-                    'Footer@contact': {
-                        templateUrl: './templates/footer.html'
-                    }
-                }
-            })
-            .state('skills', {
-                url: '/skills',
-                views: {
-                    '': {
-                        templateUrl: './templates/skills-main.html'
-                    },
-                    'Header@skills': {
-                        templateUrl: './templates/nav.html',
-                        controller: 'NavController'
-                    },
-                    'Body@skills': {
-                        templateUrl: './templates/skills-body.html',
-                    },
-                    'Sidebar@skills': {
-                        templateUrl: './templates/skills-side.html',
-                        controller: 'MongooseController'
-                    },
-                    'Footer@skills': {
-                        templateUrl: './templates/footer.html'
-                    }
-                }
-            })
-
-
-        //END ROUTE CONFIGURTATION
-    }]);
-
-
-
-
-app.factory('Todos', ['$http', function($http) {
-    return {
-        get: function() {
-            return $http.get('/api/users');
-        },
-        create: function(todoData) {
-            return $http.post('/api/users', todoData);
-        },
-        delete: function(id) {
-            return $http.delete('/api/users/' + id);
-        }
-    };
-}]);
-
-
-
-
-// inject the Todo service factory into our controller
 app.controller('MongooseController', ['$scope', '$http', 'Todos', function($scope, $http, Todos) {
     $scope.formData = {};
     $scope.loading = true;
@@ -153,21 +37,22 @@ app.controller('MongooseController', ['$scope', '$http', 'Todos', function($scop
             });
         }
     };
-
-    // DELETE ==================================================================
-    // delete a todo after checking it
-    $scope.deleteTodo = function(id) {
-        $scope.loading = true;
-
-        Todos.delete(id)
-            // if successful creation, call our get function to get all the new todos
-            .success(function(data) {
-                $scope.loading = false;
-                $scope.todos = data; // assign our new list of todos
-            });
-    };
 }]);
 
+
+app.factory('Todos', ['$http', function($http) {
+    return {
+        get: function() {
+            return $http.get('/api/users');
+        },
+        create: function(todoData) {
+            return $http.post('/api/users', todoData);
+        },
+        delete: function(id) {
+            return $http.delete('/api/users/' + id);
+        }
+    };
+}]);
 
 
 
