@@ -1,4 +1,6 @@
-var app = angular.module('app', ['firebase',
+var app = angular.module('app', [
+    'firebase',
+    'ngMessages',
     'ui.router.config',
     'angular-flexslider'
     ])
@@ -33,7 +35,7 @@ app.controller('MongooseController', ['$scope', '$http', 'Users', function($scop
 
     // CREATE ==================================================================
     // when submitting the add form, send the text to the node API
-    $scope.createTodo = function() {
+    $scope.createUser = function() {
 
         // validate the formData to make sure that something is there
         // if form is empty, nothing will happen
@@ -47,11 +49,18 @@ app.controller('MongooseController', ['$scope', '$http', 'Users', function($scop
             .success(function(data) {
                 $scope.loading = false;
                 $scope.formData = {}; // clear the form so our user is ready to enter another
-                $scope.Users = data; // assign our new list of Users
+                $scope.users = data; // assign our new list of Users
             });
         }
     };
 }]);
+
+app.controller('DummyController', function($scope){
+
+    var vm = this; 
+
+    vm.content = 'Hello from the dummy controller';
+});
 
 
 
