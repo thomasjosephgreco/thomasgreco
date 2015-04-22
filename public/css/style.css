@@ -215,14 +215,14 @@ input[type='submit']:hover {
   background-color: #0e2fe3;
 }
 
-/* line 12, ../sass/_grids.scss */
+/* line 13, ../sass/_grids.scss */
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
 
-/* line 18, ../sass/_grids.scss */
+/* line 19, ../sass/_grids.scss */
 body {
   max-width: 100%;
   margin-left: auto;
@@ -234,56 +234,8 @@ body:after {
   display: block;
   clear: both;
 }
-/* line 65, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.2/sass/susy/language/susy/_background.scss */
-head {
-  display: block;
-  position: fixed;
-  left: 10px;
-  top: 10px;
-  z-index: 999;
-  color: #333;
-  background: rgba(255, 255, 255, 0.25);
-}
-/* line 66, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.2/sass/susy/language/susy/_background.scss */
-head:before {
-  content: "|||";
-  display: block;
-  padding: 5px 10px;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-}
-/* line 67, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.2/sass/susy/language/susy/_background.scss */
-head:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: red;
-}
-/* line 71, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.2/sass/susy/language/susy/_background.scss */
-head:hover ~ body, head:hover ~ body body {
-  position: relative;
-}
-/* line 74, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.2/sass/susy/language/susy/_background.scss */
-head:hover ~ body:before, head:hover ~ body body:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: " ";
-  z-index: 998;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI4MCUiIHN0b3AtY29sb3I9IiNiM2IzZmYiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iODAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(80%, rgba(179, 179, 255, 0.25)), color-stop(80%, rgba(0, 0, 0, 0)));
-  background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, rgba(0, 0, 0, 0) 80%);
-  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, rgba(0, 0, 0, 0) 80%);
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, rgba(0, 0, 0, 0) 80%);
-  background-size: 8.47457627%;
-  background-origin: content-box;
-  background-clip: content-box;
-  background-position: left top;
-}
 
-/* line 22, ../sass/_grids.scss */
+/* line 23, ../sass/_grids.scss */
 header {
   width: 100%;
   float: left;
@@ -291,25 +243,25 @@ header {
   margin-right: 0;
 }
 
-/* line 26, ../sass/_grids.scss */
+/* line 27, ../sass/_grids.scss */
 .skills-layout {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
 }
-/* line 28, ../sass/_grids.scss */
+/* line 29, ../sass/_grids.scss */
 .skills-layout .skills-sidebar {
   @inclue span(4 of 12);
 }
-/* line 30, ../sass/_grids.scss */
+/* line 31, ../sass/_grids.scss */
 .skills-layout .skills-sidebar .skills-body {
   width: 66.10169492%;
   float: right;
   margin-right: 0;
 }
 
-/* line 37, ../sass/_grids.scss */
+/* line 38, ../sass/_grids.scss */
 footer {
   width: 100%;
   float: left;
@@ -322,14 +274,14 @@ footer {
 }
 
 @media screen and (min-width: 670px) {
-  /* line 46, ../sass/_grids.scss */
+  /* line 47, ../sass/_grids.scss */
   .logo-row {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 48, ../sass/_grids.scss */
+  /* line 49, ../sass/_grids.scss */
   .logo-row > img {
     width: 32.20338983%;
     float: left;
@@ -339,14 +291,14 @@ footer {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 669px) {
-  /* line 56, ../sass/_grids.scss */
+  /* line 57, ../sass/_grids.scss */
   .logo-row {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 58, ../sass/_grids.scss */
+  /* line 59, ../sass/_grids.scss */
   .logo-row > img {
     width: 32.20338983%;
     float: left;
@@ -355,20 +307,20 @@ footer {
     height: 300px;
   }
 }
-/* line 65, ../sass/_grids.scss */
+/* line 66, ../sass/_grids.scss */
 .buttons {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-/* line 68, ../sass/_grids.scss */
+/* line 69, ../sass/_grids.scss */
 .buttons > .links {
   -webkit-flex-grow: 1;
   flex-grow: 1;
 }
 
-/* line 73, ../sass/_grids.scss */
+/* line 74, ../sass/_grids.scss */
 .wrap {
   width: 100%;
   float: left;
@@ -376,7 +328,7 @@ footer {
   margin-right: 0;
 }
 
-/* line 78, ../sass/_grids.scss */
+/* line 79, ../sass/_grids.scss */
 .form-header {
   width: 66.10169492%;
   float: left;
@@ -384,14 +336,14 @@ footer {
   margin-right: -100%;
 }
 
-/* line 82, ../sass/_grids.scss */
+/* line 83, ../sass/_grids.scss */
 .form-wrapper {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
 }
-/* line 84, ../sass/_grids.scss */
+/* line 85, ../sass/_grids.scss */
 .form-wrapper form {
   font-size: 1.2em;
   width: 83.05084746%;
@@ -401,7 +353,7 @@ footer {
   padding: 2em;
   margin-bottom: 15px;
 }
-/* line 91, ../sass/_grids.scss */
+/* line 92, ../sass/_grids.scss */
 .form-wrapper .button-row {
   width: 32.20338983%;
   float: left;
@@ -409,18 +361,18 @@ footer {
   margin-right: -100%;
 }
 
-/* line 96, ../sass/_grids.scss */
+/* line 97, ../sass/_grids.scss */
 .form-wrapper > h2, p {
   text-align: center;
   padding: 1.125em;
 }
 
-/* line 101, ../sass/_grids.scss */
+/* line 102, ../sass/_grids.scss */
 .gallery {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 103, ../sass/_grids.scss */
+/* line 104, ../sass/_grids.scss */
 .gallery .gallery-item {
   width: 23.07692308%;
   float: left;
@@ -451,7 +403,7 @@ footer {
   clear: none;
 }
 
-/* line 108, ../sass/_grids.scss */
+/* line 109, ../sass/_grids.scss */
 .main-content {
   width: 83.05084746%;
   float: left;
@@ -459,7 +411,7 @@ footer {
   margin-right: -100%;
 }
 
-/* line 112, ../sass/_grids.scss */
+/* line 113, ../sass/_grids.scss */
 .mc-slider {
   width: 49.15254237%;
   float: left;
@@ -467,20 +419,20 @@ footer {
   margin-right: -100%;
 }
 
-/* line 117, ../sass/_grids.scss */
+/* line 118, ../sass/_grids.scss */
 .blog-wrap {
   width: 74.57627119%;
   float: left;
   margin-right: 1.69491525%;
 }
-/* line 119, ../sass/_grids.scss */
+/* line 120, ../sass/_grids.scss */
 .blog-wrap .blog-sidebar {
   width: 23.72881356%;
   float: right;
   margin-right: 0;
 }
 
-/* line 124, ../sass/_grids.scss */
+/* line 125, ../sass/_grids.scss */
 .about-box {
   width: 49.15254237%;
   float: left;
@@ -490,19 +442,19 @@ footer {
   padding: 20px;
 }
 
-/* line 130, ../sass/_grids.scss */
+/* line 131, ../sass/_grids.scss */
 .about-hr {
   width: 90%;
 }
 
-/* line 134, ../sass/_grids.scss */
+/* line 135, ../sass/_grids.scss */
 .bottom_wrapper {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
 }
-/* line 136, ../sass/_grids.scss */
+/* line 137, ../sass/_grids.scss */
 .bottom_wrapper .centered_div {
   width: 49.15254237%;
   float: left;
@@ -511,7 +463,7 @@ footer {
   margin-top: 1.25em;
 }
 
-/* line 142, ../sass/_grids.scss */
+/* line 143, ../sass/_grids.scss */
 .panel-wrap {
   width: 83.05084746%;
   float: left;
@@ -519,25 +471,25 @@ footer {
   margin-right: -100%;
   text-align: center;
 }
-/* line 145, ../sass/_grids.scss */
+/* line 146, ../sass/_grids.scss */
 .panel-wrap .panel {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 147, ../sass/_grids.scss */
+/* line 148, ../sass/_grids.scss */
 .panel-wrap .panel .panel-img {
   width: 15.25423729%;
   float: left;
   margin-right: 1.69491525%;
 }
-/* line 149, ../sass/_grids.scss */
+/* line 150, ../sass/_grids.scss */
 .panel-wrap .panel .panel-img .panel-text {
   width: 66.10169492%;
   float: left;
   margin-right: 1.69491525%;
 }
 
-/* line 157, ../sass/_grids.scss */
+/* line 158, ../sass/_grids.scss */
 .button {
   height: 50px;
 }

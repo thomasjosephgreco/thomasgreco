@@ -8,7 +8,8 @@ $susy: ( flow: ltr, math: fluid, // static requires column-width
 container-position: center, // left, center, it is the padding
 //gutter-position: after, //before after | split | inside | inside-static
 columns: 12, gutters: 1/4, //Space Between Elements
-global-box-sizing: border-box, debug: (image: show-columns, output: overlay, toggle: top left));
+global-box-sizing: border-box);
+//debug: (image: show-columns, output: overlay, toggle: top left)
 *,
 *:before,
 *:after {
