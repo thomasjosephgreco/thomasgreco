@@ -1600,12 +1600,16 @@ li a {
 }
 
 /* line 111, ../sass/_typography.scss */
-a .button .border-button {
+a:active, a .button .border-button {
   font-family: "Merriweather";
   font-weight: 700;
 }
+/* line 114, ../sass/_typography.scss */
+a:active:hover, a .button .border-button:hover {
+  text-decoration: none;
+}
 
-/* line 116, ../sass/_typography.scss */
+/* line 121, ../sass/_typography.scss */
 select {
   color: black;
 }

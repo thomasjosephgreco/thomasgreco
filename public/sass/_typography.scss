@@ -108,10 +108,15 @@ li a {
 }
 
 
-a .button .border-button {
+a:active, a .button .border-button {
     font-family: $font-one;
     font-weight: $bold;
+    &:hover {
+        text-decoration: none;
+    }
 }
+
+
 
 select {
     color: black;
