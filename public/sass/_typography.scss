@@ -108,7 +108,7 @@ li a {
 }
 
 
-a:link, a .button .border-button {
+a .button .border-button {
     font-family: $font-one;
     font-weight: $bold;
     &:hover {
@@ -116,12 +116,10 @@ a:link, a .button .border-button {
     }
 }
 
-li > a .flex-nav-item {
-    color: #fdfdfd;
-    &:hover {
-        text-decoration: none;
-    }
+a:active {
+    font-weight: $bold;
 }
+
 
 
 

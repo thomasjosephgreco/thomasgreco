@@ -82,14 +82,16 @@ label {
         @include display-flex();
         @include link-colors($navy-blue, lighten($navy-blue, 20%), #212, inherit);
         text-decoration: none;
-        color: white;
+        color: #051153;
         font-size: 1.25em;
         padding: 5px 10px;
+        font-weight: 400;
     }
     .flex-nav-item {
         @extend %flex-nav-item;
         &:hover {
             background-color: #aaa;
+            text-decoration: none;
         }
     }
     .search {
@@ -100,6 +102,7 @@ label {
         }
     }
 }
+
 
 @media screen and (min-width: 670px) {
     .bottom-flex-nav {

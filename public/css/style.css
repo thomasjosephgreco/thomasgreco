@@ -1600,25 +1600,21 @@ li a {
 }
 
 /* line 111, ../sass/_typography.scss */
-a:link, a .button .border-button {
+a .button .border-button {
   font-family: "Merriweather";
   font-weight: 700;
 }
 /* line 114, ../sass/_typography.scss */
-a:link:hover, a .button .border-button:hover {
+a .button .border-button:hover {
   text-decoration: none;
 }
 
 /* line 119, ../sass/_typography.scss */
-li > a .flex-nav-item {
-  color: #fdfdfd;
-}
-/* line 121, ../sass/_typography.scss */
-li > a .flex-nav-item:hover {
-  text-decoration: none;
+a:active {
+  font-weight: 700;
 }
 
-/* line 128, ../sass/_typography.scss */
+/* line 126, ../sass/_typography.scss */
 select {
   color: black;
 }
@@ -1703,9 +1699,10 @@ label {
     display: flex;
     color: #051153;
     text-decoration: none;
-    color: white;
+    color: #051153;
     font-size: 1.25em;
     padding: 5px 10px;
+    font-weight: 400;
   }
   /* line 18, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
   .flex-nav-item:visited, .search:visited, .icon:visited {
@@ -1720,23 +1717,24 @@ label {
     color: #212;
   }
 
-  /* line 91, ../sass/style.scss */
+  /* line 92, ../sass/style.scss */
   .flex-nav-item:hover {
     background-color: #aaa;
+    text-decoration: none;
   }
 
-  /* line 95, ../sass/style.scss */
+  /* line 97, ../sass/style.scss */
   .search {
     -webkit-flex-grow: 1;
     flex-grow: 1;
   }
-  /* line 98, ../sass/style.scss */
+  /* line 100, ../sass/style.scss */
   .search:hover {
     background-color: #aaa;
   }
 }
 @media screen and (min-width: 670px) {
-  /* line 105, ../sass/style.scss */
+  /* line 108, ../sass/style.scss */
   .bottom-flex-nav {
     display: -webkit-flex;
     display: flex;
@@ -1745,7 +1743,7 @@ label {
     width: 100%;
   }
 
-  /* line 110, ../sass/style.scss */
+  /* line 113, ../sass/style.scss */
   .bottom-nav-items {
     -webkit-align-items: center;
     align-items: center;
@@ -1757,22 +1755,22 @@ label {
     padding: 5px 10px;
   }
 
-  /* line 120, ../sass/style.scss */
+  /* line 123, ../sass/style.scss */
   .bottom-nav-items:hover {
     background-color: #aaa;
   }
 
-  /* line 124, ../sass/style.scss */
+  /* line 127, ../sass/style.scss */
   .icon {
     -webkit-flex-grow: 1;
     flex-grow: 1;
   }
-  /* line 127, ../sass/style.scss */
+  /* line 130, ../sass/style.scss */
   .icon:hover {
     background-color: #aaa;
   }
 }
-/* line 133, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 #nav,
 .tinynav {
   display: none;
@@ -1780,7 +1778,7 @@ label {
 
 /* styles for mobile */
 @media screen and (max-width: 669px) {
-  /* line 140, ../sass/style.scss */
+  /* line 143, ../sass/style.scss */
   .nav-toggle {
     width: 100%;
     float: left;
@@ -1788,13 +1786,13 @@ label {
     margin-right: 0;
     background: white;
   }
-  /* line 143, ../sass/style.scss */
+  /* line 146, ../sass/style.scss */
   .nav-toggle .tinynav {
     display: block;
     width: 100%;
   }
 }
-/* line 150, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 a .button .button-border {
   width: 200px;
   margin-bottom: 20px;
