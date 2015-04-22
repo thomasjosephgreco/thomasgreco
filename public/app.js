@@ -78,9 +78,10 @@ app.controller('MongooseController', ['$scope', '$http', 'Users', function($scop
     // when submitting the add form, send the text to the node API
     $scope.createUser = function() {
 
+
         // validate the formData to make sure that something is there
         // if form is empty, nothing will happen
-        if ($scope.formData.name != undefined) {
+        if ($scope.formData != undefined) {
             $scope.loading = true;
 
             // call the create function from our service (returns a promise object)

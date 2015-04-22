@@ -56,7 +56,7 @@ angular.module('ui.router.config', ['ui.router'])
                     },
 
                     'Contact-Form@contact': {
-                        templateUrl: './templates/mongo-form.html',
+                        templateUrl: './templates/myForm.html',
                         controller: 'MongooseController'
                     },
                     'Footer@contact': {
