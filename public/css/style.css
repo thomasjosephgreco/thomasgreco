@@ -1692,49 +1692,43 @@ label {
   }
 
   /* line 80, ../sass/style.scss */
-  .flex-nav-item, .search, .icon {
+  .flex-nav-item, .icon {
     -webkit-align-items: center;
     align-items: center;
     display: -webkit-flex;
     display: flex;
     color: #051153;
     text-decoration: none;
-    color: #051153;
     font-size: 1.25em;
     padding: 5px 10px;
     font-weight: 400;
   }
   /* line 18, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-  .flex-nav-item:visited, .search:visited, .icon:visited {
-    color: inherit;
+  .flex-nav-item:visited, .icon:visited {
+    color: #051153;
   }
   /* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-  .flex-nav-item:hover, .search:hover, .icon:hover {
+  .flex-nav-item:hover, .icon:hover {
     color: #0b25b3;
   }
   /* line 27, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-  .flex-nav-item:active, .search:active, .icon:active {
-    color: #212;
+  .flex-nav-item:active, .icon:active {
+    color: black;
   }
 
-  /* line 92, ../sass/style.scss */
+  /* line 91, ../sass/style.scss */
   .flex-nav-item:hover {
     background-color: #aaa;
     text-decoration: none;
   }
 
-  /* line 97, ../sass/style.scss */
-  .search {
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
-  }
-  /* line 100, ../sass/style.scss */
-  .search:hover {
-    background-color: #aaa;
+  /* line 98, ../sass/style.scss */
+  .flex-nav-item:active {
+    font-weight: 700;
   }
 }
 @media screen and (min-width: 670px) {
-  /* line 108, ../sass/style.scss */
+  /* line 106, ../sass/style.scss */
   .bottom-flex-nav {
     display: -webkit-flex;
     display: flex;
@@ -1743,7 +1737,7 @@ label {
     width: 100%;
   }
 
-  /* line 113, ../sass/style.scss */
+  /* line 111, ../sass/style.scss */
   .bottom-nav-items {
     -webkit-align-items: center;
     align-items: center;
@@ -1755,22 +1749,22 @@ label {
     padding: 5px 10px;
   }
 
-  /* line 123, ../sass/style.scss */
+  /* line 121, ../sass/style.scss */
   .bottom-nav-items:hover {
     background-color: #aaa;
   }
 
-  /* line 127, ../sass/style.scss */
+  /* line 125, ../sass/style.scss */
   .icon {
     -webkit-flex-grow: 1;
     flex-grow: 1;
   }
-  /* line 130, ../sass/style.scss */
+  /* line 128, ../sass/style.scss */
   .icon:hover {
     background-color: #aaa;
   }
 }
-/* line 136, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 #nav,
 .tinynav {
   display: none;
@@ -1778,7 +1772,7 @@ label {
 
 /* styles for mobile */
 @media screen and (max-width: 669px) {
-  /* line 143, ../sass/style.scss */
+  /* line 141, ../sass/style.scss */
   .nav-toggle {
     width: 100%;
     float: left;
@@ -1786,13 +1780,13 @@ label {
     margin-right: 0;
     background: white;
   }
-  /* line 146, ../sass/style.scss */
+  /* line 144, ../sass/style.scss */
   .nav-toggle .tinynav {
     display: block;
     width: 100%;
   }
 }
-/* line 153, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 a .button .button-border {
   width: 200px;
   margin-bottom: 20px;

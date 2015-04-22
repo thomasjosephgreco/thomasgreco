@@ -80,9 +80,8 @@ label {
     %flex-nav-item {
         @include align-items(center);
         @include display-flex();
-        @include link-colors($navy-blue, lighten($navy-blue, 20%), #212, inherit);
+        @include link-colors($navy-blue, lighten($navy-blue, 20%), darken($navy-blue, 30%), $navy-blue);
         text-decoration: none;
-        color: #051153;
         font-size: 1.25em;
         padding: 5px 10px;
         font-weight: 400;
@@ -94,11 +93,10 @@ label {
             text-decoration: none;
         }
     }
-    .search {
+    .flex-nav-item {
         @extend %flex-nav-item;
-        @include flex-grow(1);
-        &:hover {
-            background-color: #aaa;
+        &:active {
+            font-weight: $bold;
         }
     }
 }
