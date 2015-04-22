@@ -11,8 +11,8 @@ app.factory('Users', ['$http', function($http) {
         get: function() {
             return $http.get('/api/users');
         },
-        create: function(todoData) {
-            return $http.post('/api/users', todoData);
+        create: function(userData) {
+            return $http.post('/api/users', userData);
         },
         delete: function(id) {
             return $http.delete('/api/users/' + id);
@@ -20,6 +20,47 @@ app.factory('Users', ['$http', function($http) {
     };
 }]);
 
+app.controller('FormValidationController', ['$scope', '$http', 'Users', function($scope, $http, Users){
+    
+
+    this.submit = function(isValid, data){
+        if(!isValid) return;
+
+        $http.post('/api/contact', data);
+    }
+}]);
+app.controller('MyController', ['$scope', '$firebase',
+    function($scope, $firebase) {
+        //CREATE A FIREBASE REFERENCE
+        var ref = new Firebase("https://zaperr.firebaseio.com/");
+
+        // GET MESSAGES AS AN ARRAY
+        $scope.messages = $firebase(ref).$asArray();
+
+        //ADD MESSAGE METHOD
+        $scope.addMessage = function(e) {
+
+            //LISTEN FOR RETURN KEY
+            if (e.keyCode === 13 && $scope.msg) {
+                //ALLOW CUSTOM OR ANONYMOUS USER NAMES
+                var name = $scope.name;
+                var location = $scope.location;
+
+                //ADD TO FIREBASE
+                $scope.messages.$add({
+                    from: name,
+                    area: location,
+                    body: $scope.msg
+                });
+
+                //RESET MESSAGE
+                $scope.msg = "";
+                $scope.name = "";
+                $scope.location = "";
+            }
+        }
+    }
+]);
 app.controller('MongooseController', ['$scope', '$http', 'Users', function($scope, $http, Users) {
     $scope.formData = {};
     $scope.loading = true;
@@ -39,7 +80,7 @@ app.controller('MongooseController', ['$scope', '$http', 'Users', function($scop
 
         // validate the formData to make sure that something is there
         // if form is empty, nothing will happen
-        if ($scope.formData.name != undefined) {
+        if ($scope.formData.nameInput != undefined) {
             $scope.loading = true;
 
             // call the create function from our service (returns a promise object)

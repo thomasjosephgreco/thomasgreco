@@ -1,40 +1,54 @@
 <div class="container">
-    <form name="myForm">
+    <h2 class="text-center">Get in Touch with Me Today!</h2>
+    <p>Whether you are curious about any projects I am currently working on, or simply introducing yourself, I enjoy continuously growing my network in the web development community. Therefore, you can easily get in touch by submitting the following information, which I ensure to respond to A.S.A.P </p>
+    <form name="myForm" ng-submit="createUser()">
         <div class="row row-centered">
-            <div class="col col-xs-12 col md-6 col-centered">
+            <div class="col col-xs-12 col-md-9 col-centered">
                 <label for="nameInput">Enter Your Name.</label>
-                <textarea class="form-control name" type="text" name="nameInput" ng-model="nameInput" required></textarea>
-                <div ng-messages="myForm.nameInput.$error" ng-if="myForm.nameInput.$dirty">
-                    <div ng-message="required">This Field is Required</div>
-                    <div ng-message="email">Must be a valid email address.</div>
+                <textarea class="form-control name" type="text" name="nameInput" ng-model="formData.nameInput" required></textarea>
+                <div ng-if="myForm.nameInput.$dirty">
+                    <div ng-show="required">This Field is Required</div>
                 </div>
             </div>
         </div>
         <div class="row row-centered">
-            <div class="col col-xs-12 col md-10 col-centered">
+            <div class="col-xs-12 col-md-9 col-centered">
                 <label for="emailAddress">Enter Your Email Address.</label>
-                <textarea class="form-control name" type="email" name="emailInput" ng-model="emailInput" required></textarea>
-                <div ng-messages="myForm.emailInput.$error" ng-if="myForm.emailInput.$dirty">
+                <textarea class="form-control name" type="email" name="emailInput" ng-model="formData.emailInput" required></textarea>
+                <div ng-messages="formData.emailInput.$error" ng-if="formData.emailInput.$dirty">
                     <div ng-message="required">This Field is Required</div>
                     <div ng-message="email">Must be a valid email address.</div>
                 </div>
             </div>
         </div>
         <div class="row row-centered">
-            <div class="col col-xs-12 col md-10 col-centered">
+            <div class="col-xs-12 col-md-9 col-centered">
                 <label for="emailAddress">Where are you located?</label>
-                <textarea class="form-control name" type="text" name="locationInput" ng-model="locationInput" required></textarea>
-                <div ng-messages="myForm.locationInput.$error" ng-if="myForm.locationInput.$dirty">
+                <textarea class="form-control name" type="text" name="locationInput" ng-model="formData.locationInput" required></textarea>
+                <div ng-messages="formData.locationInput.$error" ng-if="formData.locationInput.$dirty">
                     <div ng-message="required">This Field is Required</div>
                     <div ng-message="email">Must be a valid email address.</div>
                 </div>
             </div>
         </div>
         <div class="row row-centered">
-            <div class="col col-xs-12 col md-10 col-centered">
-                <label for="reasonInput">Your reason for contacting me today?</label>
-                <textarea class="form-control name" type="text" name="reasonInput" ng-model="reasonInput" required minlength="100" maxlength="1000"></textarea>
-                <div ng-messages="myForm.reasonInput.$error" ng-if="myForm.reasonInput.$dirty">
+            <div class="col-xs-12 col-md-9 col-centered">
+                <div class="panel panel-primary">
+                    <select ng-model="formData.reasonInput" name="reasonInput" id="reasonInput">
+                        <option value="">Select a Reason for Contacting Me</option>
+                        <option value="Web Development">Question About Web Development</option>
+                        <option value="Graphic Design">Question About Graphic Design</option>
+                        <option value="Job Inquiry">Job Inquiry</option>
+                        <option value="Just Saying Hello">Just Saying Hello</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row row-centered">
+            <div class="col-xs-12 col-md-9 col-centered">
+                <label for="messageInput">Your reason for contacting me today?</label>
+                <textarea class="form-control name" type="text" name="messageInput" ng-model="formData.messageInput" required minlength="100" maxlength="1000"></textarea>
+                <div ng-messages="formData.messageInput.$error" ng-if="formData.messageInput.$dirty">
                     <div ng-message="required">This Field is Required</div>
                     <div ng-message="minlength">Elabortate a little more please.</div>
                     <div ng-message="maxlength">You've Excited Your Character Number. Try making it a litle more concise</div>
@@ -42,6 +56,6 @@
             </div>
         </div>
         <div class="row row-centered button-row">
-            <a type="submit" class="button button-border" ng-click="createUser()">Click Here to Submit</a></div>
-    </form>
+            <a type="submit" ng-disabled="formData.$invalid" class="button button-border">Click Here to Submit</a></div>
+        <form>
 </div>

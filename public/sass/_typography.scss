@@ -104,5 +104,15 @@ li a {
     @include adjust-font-size-to(16px);
     padding-top: rhythm(1, 16px);
     text-align: center;
-    text-weight: $bold;
+    font-weight: $bold;
+}
+
+
+a .button .border-button {
+    font-family: $font-one;
+    font-weight: $bold;
+}
+
+select {
+    color: black;
 }
