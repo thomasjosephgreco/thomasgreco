@@ -116,6 +116,13 @@ a:active, a .button .border-button {
     }
 }
 
+li > a .flex-nav-item {
+    color: #fdfdfd;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 
 
 select {

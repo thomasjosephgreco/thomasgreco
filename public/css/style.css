@@ -1609,7 +1609,16 @@ a:active:hover, a .button .border-button:hover {
   text-decoration: none;
 }
 
+/* line 119, ../sass/_typography.scss */
+li > a .flex-nav-item {
+  color: #fdfdfd;
+}
 /* line 121, ../sass/_typography.scss */
+li > a .flex-nav-item:hover {
+  text-decoration: none;
+}
+
+/* line 128, ../sass/_typography.scss */
 select {
   color: black;
 }
