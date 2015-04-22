@@ -108,7 +108,7 @@ li a {
 }
 
 
-a:active, a .button .border-button {
+a:link, a .button .border-button {
     font-family: $font-one;
     font-weight: $bold;
     &:hover {
