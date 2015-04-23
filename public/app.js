@@ -1,5 +1,4 @@
 var app = angular.module('app', [
-    'firebase',
     'ngMessages',
     'ui.router.config',
     'angular-flexslider'
@@ -20,59 +19,9 @@ app.factory('Users', ['$http', function($http) {
     };
 }]);
 
-app.controller('FormValidationController', ['$scope', '$http', 'Users', function($scope, $http, Users){
-    
 
-    this.submit = function(isValid, data){
-        if(!isValid) return;
-
-        $http.post('/api/contact', data);
-    }
-}]);
-app.controller('MyController', ['$scope', '$firebase',
-    function($scope, $firebase) {
-        //CREATE A FIREBASE REFERENCE
-        var ref = new Firebase("https://zaperr.firebaseio.com/");
-
-        // GET MESSAGES AS AN ARRAY
-        $scope.messages = $firebase(ref).$asArray();
-
-        //ADD MESSAGE METHOD
-        $scope.addMessage = function(e) {
-
-            //LISTEN FOR RETURN KEY
-            if (e.keyCode === 13 && $scope.msg) {
-                //ALLOW CUSTOM OR ANONYMOUS USER NAMES
-                var name = $scope.name;
-                var location = $scope.location;
-
-                //ADD TO FIREBASE
-                $scope.messages.$add({
-                    from: name,
-                    area: location,
-                    body: $scope.msg
-                });
-
-                //RESET MESSAGE
-                $scope.msg = "";
-                $scope.name = "";
-                $scope.location = "";
-            }
-        }
-    }
-]);
 app.controller('MongooseController', ['$scope', '$http', 'Users', function($scope, $http, Users) {
     $scope.formData = {};
-    $scope.loading = true;
-
-    // GET =====================================================================
-    // when landing on the page, get all Users and show them
-    // use the service to get all the Users
-    Users.get()
-        .success(function(data) {
-            $scope.Users = data;
-            $scope.loading = false;
-        });
 
     // CREATE ==================================================================
     // when submitting the add form, send the text to the node API
@@ -82,56 +31,17 @@ app.controller('MongooseController', ['$scope', '$http', 'Users', function($scop
         // validate the formData to make sure that something is there
         // if form is empty, nothing will happen
         if ($scope.formData != undefined) {
-            $scope.loading = true;
-
             // call the create function from our service (returns a promise object)
             Users.create($scope.formData)
 
             // if successful creation, call our get function to get all the new Users
             .success(function(data) {
-                $scope.loading = false;
                 $scope.formData = {}; // clear the form so our user is ready to enter another
                 $scope.users = data; // assign our new list of Users
             });
         }
     };
 }]);
-
-app.controller('DummyController', function($scope){
-
-    var vm = this; 
-
-    vm.content = 'Hello from the dummy controller';
-});
-
-
-
-
-
-app.controller('MainModalController', function($scope, ModalService) {
-
-    $scope.show = function() {
-        ModalService.showModal({
-            templateUrl: './templates/main-modal.html',
-            controller: "ModalController"
-        }).then(function(modal) {
-            modal.element.modal();
-            modal.close.then(function(result) {
-                $scope.message = "You said " + result;
-            });
-        });
-    };
-
-});
-
-app.controller('ModalController', function($scope, close) {
-
-    $scope.close = function(result) {
-        close(result, 500); // close, but give 500ms for bootstrap to animate
-    };
-
-});
-
 
 
 
