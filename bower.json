@@ -1,0 +1,27 @@
+{
+  "name": "tg-fullstack",
+  "version": "1.0.0",
+  "homepage": "https://github.com/thomasjosephgreco/mongoose-starter",
+  "authors": [
+    "Thomas Greco <Thomasjosephgreco@yahoo.com>"
+  ],
+  "description": "Full stack appication hosted at thomasgreco.me",
+  "main": "public/index.html",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular-flexslider": "~1.3.2",
+    "angular-messages": "~1.3.15",
+    "angular-modal-service": "~0.6.5",
+    "angular-resource": "~1.3.15",
+    "angular-ui-router": "~0.2.13",
+    "angularfire": "~1.0.0",
+    "animate-css": "~3.2.3",
+    "firebase": "~2.2.2",
+    "swagger-angular-client": "~0.1.11",
+    "angular-mocks": "~1.3.15"
+  }
+}
