@@ -65,26 +65,25 @@ angular.module('ui.router.config', ['ui.router'])
                 }
             })
             .state('skills', {
+                abstract: true,
                 url: '/skills',
-                views: {
-                    '': {
-                        templateUrl: './templates/skills-main.html'
-                    },
-                    'Header@skills': {
-                        templateUrl: './templates/nav.html',
-                        controller: 'NavController'
-                    },
-                    'Body@skills': {
-                        templateUrl: './templates/skills-body.html',
-                    },
-                    'Sidebar@skills': {
-                        templateUrl: './templates/skills-side.html',
-                        controller: 'MongooseController'
-                    },
-                    'Footer@skills': {
-                        templateUrl: './templates/footer.html'
-                    }
-                }
+                templateUrl: './templates/skills.html'
+            })
+            .state("skills.routing", {
+                url: "/routing",
+                templateUrl: "./templates/tabs/ui-router.html"
+            })
+            .state("skills.grunt", {
+                url: "/grunt",
+                templateUrl: "./templates/tabs/grunt.html"
+            })
+            .state("skills.mongodb", {
+                url: "/mongodb",
+                templateUrl: "./templates/tabs/mongodb.html"
+            })
+            .state("skills.angular", {
+                url: "/angular",
+                templateUrl: "./templates/tabs/angular.html"
             })
 
 

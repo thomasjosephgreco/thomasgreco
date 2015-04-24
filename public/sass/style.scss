@@ -13,11 +13,9 @@
 @import "breakpoint";
 /* centered columns styles */
 
-
 .row-centered {
     text-align: center;
 }
-
 
 .col-centered {
     display: inline-block;
@@ -101,6 +99,18 @@ label {
     }
 }
 
+.skills-nav {
+    @include display-flex();
+    @include justify-content(space-around);
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    .skill-states {
+        @extend %flex-nav-item;
+        @include flex-flow(row wrap);
+    }
+}
 
 @media screen and (min-width: 670px) {
     .bottom-flex-nav {
@@ -149,6 +159,6 @@ label {
 }
 
 a .button .button-border {
-        width: 200px;
-        margin-bottom: 20px;
-    }
+    width: 200px;
+    margin-bottom: 20px;
+}
