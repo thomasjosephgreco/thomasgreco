@@ -13,11 +13,8 @@ var favicon = require('serve-favicon');
 var ghost = require('ghost');
 
 
-ghost({
-    config: path.join(__dirname, 'config.js')
-}).then(function(ghostServer) {
-    app.use(ghostServer.config.paths.subdir, ghostServer.rootApp);
-    ghostServer.start(app);
+ghost().then(function (ghostServer) {
+    ghostServer.start();
 });
 
 mongoose.connect(database.url); // connect to mongoDB database on modulus.io
