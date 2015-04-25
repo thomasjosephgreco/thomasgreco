@@ -1480,6 +1480,12 @@ h2 .main-heading {
 }
 
 /* line 30, ../sass/_typography.scss */
+.form-error {
+  color: red;
+  font-weight: 600;
+}
+
+/* line 34, ../sass/_typography.scss */
 .panel-heading {
   font-size: 1.5em;
   line-height: 2em;
@@ -1488,23 +1494,23 @@ h2 .main-heading {
   text-align: center;
 }
 
-/* line 37, ../sass/_typography.scss */
+/* line 41, ../sass/_typography.scss */
 h1.blue-head {
   color: #2b94c2;
 }
 
-/* line 40, ../sass/_typography.scss */
+/* line 44, ../sass/_typography.scss */
 h3 {
   font-size: 1.3125em;
   line-height: 2.28571429em;
   font-weight: 300;
 }
-/* line 43, ../sass/_typography.scss */
+/* line 47, ../sass/_typography.scss */
 h3 center {
   text-align: center;
 }
 
-/* line 47, ../sass/_typography.scss */
+/* line 51, ../sass/_typography.scss */
 p {
   font-size: 1em;
   line-height: 1.5em;
@@ -1512,31 +1518,31 @@ p {
   font-weight: 300;
   text-align: justify;
 }
-/* line 52, ../sass/_typography.scss */
+/* line 56, ../sass/_typography.scss */
 p > em {
   font-style: italic;
 }
 
-/* line 58, ../sass/_typography.scss */
+/* line 62, ../sass/_typography.scss */
 .about-intro {
   font-style: italic;
   text-align: justify;
   padding: 1em;
 }
 
-/* line 64, ../sass/_typography.scss */
+/* line 68, ../sass/_typography.scss */
 .lr-heading {
   text-align: center;
 }
 
-/* line 68, ../sass/_typography.scss */
+/* line 72, ../sass/_typography.scss */
 .header-text {
   font-size: 1.125em;
   line-height: 1.33333333em;
   margin-bottom: 1.33333333em;
 }
 
-/* line 72, ../sass/_typography.scss */
+/* line 76, ../sass/_typography.scss */
 .quote-text {
   font-size: 1.375em;
   line-height: 2.18181818em;
@@ -1546,35 +1552,35 @@ p > em {
   color: white;
 }
 
-/* line 79, ../sass/_typography.scss */
+/* line 83, ../sass/_typography.scss */
 .top-nav > li a {
   font-size: 1.125em;
   line-height: 1.33333333em;
   padding-right: 1.33333333em;
 }
 
-/* line 84, ../sass/_typography.scss */
+/* line 88, ../sass/_typography.scss */
 .button {
   font-family: "Merriweather";
   font-weight: 700;
 }
 
-/* line 89, ../sass/_typography.scss */
+/* line 93, ../sass/_typography.scss */
 li a {
   text-decoration: none;
 }
 
-/* line 94, ../sass/_typography.scss */
+/* line 98, ../sass/_typography.scss */
 .form-wrapper h2 {
   text-align: center;
 }
 
-/* line 99, ../sass/_typography.scss */
+/* line 103, ../sass/_typography.scss */
 .main-heading {
   text-align: center;
 }
 
-/* line 103, ../sass/_typography.scss */
+/* line 107, ../sass/_typography.scss */
 .footer-text {
   font-size: 1em;
   line-height: 1.5em;
@@ -1583,22 +1589,22 @@ li a {
   font-weight: 700;
 }
 
-/* line 111, ../sass/_typography.scss */
+/* line 115, ../sass/_typography.scss */
 a .button .border-button {
   font-family: "Merriweather";
   font-weight: 700;
 }
-/* line 114, ../sass/_typography.scss */
+/* line 118, ../sass/_typography.scss */
 a .button .border-button:hover {
   text-decoration: none;
 }
 
-/* line 119, ../sass/_typography.scss */
+/* line 123, ../sass/_typography.scss */
 a:active {
   font-weight: 700;
 }
 
-/* line 126, ../sass/_typography.scss */
+/* line 130, ../sass/_typography.scss */
 select {
   color: black;
 }

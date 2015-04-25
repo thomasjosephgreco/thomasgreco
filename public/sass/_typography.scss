@@ -27,6 +27,10 @@ h2 {
     }
 }
 
+.form-error {
+    color: red;
+    font-weight: $bold - 100;
+}
 .panel-heading {
     @include adjust-font-size-to(24px);
     margin-bottom: rhythm(1, 24px);
