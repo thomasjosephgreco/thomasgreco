@@ -84,7 +84,10 @@ angular.module('ui.router.config', ['ui.router'])
             .state("skills.angular", {
                 url: "/angular",
                 templateUrl: "./templates/tabs/angular.html"
-            })
+            });
+
+
+            $locationProvider.html5Mode(true).hashPrefix('!')
 
 
         //END ROUTE CONFIGURTATION

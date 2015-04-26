@@ -1,11 +1,11 @@
 <header>
     <div class="nav-toggle">
         <ul id="nav">
-            <li><a ui-sref="home">Home</a>
+            <li><a ui-sref="/home">Home</a>
             </li>
-            <li><a ui-sref="about">This Application</a>
+            <li><a ui-sref="/about">This Application</a>
             </li>
-            <li><a ui-sref="contact">Contact Me!</a>
+            <li><a ui-sref="/contact">Contact Me!</a>
             </li>
             <li><a href="http://bit.ly/TGlinkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
             </li>
@@ -15,11 +15,11 @@
     </div>
     <nav role="navigation">
         <ul class="flex-nav">
-            <li><a class="flex-nav-item" ui-sref="home">Home</a>
+            <li><a class="flex-nav-item" ui-sref="/home">Home</a>
             </li>
-            <li><a class="flex-nav-item" ui-sref="skills.routing">This Application</a>
+            <li><a class="flex-nav-item" ui-sref="/skills.routing">This Application</a>
             </li>
-            <li><a class="flex-nav-item" ui-sref="contact">Contact Me!</a>
+            <li><a class="flex-nav-item" ui-sref="/contact">Contact Me!</a>
             </li>
             <li><a class="flex-nav-item" href="http://bit.ly/TGlinkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
             </li>
@@ -33,10 +33,10 @@
 </header>
 <div ng-controller="TabController">
     <ul class="skills-nav">
-        <li><a class="skill-states" ui-sref="skills.routing">Routing</a></li>
-        <li><a class="skill-states" ui-sref="skills.mongodb">MongoDB</a></li>
-        <li><a class="skill-states" ui-sref="skills.grunt">Grunt</a></li>
-        <li><a class="skill-states" ui-sref="skills.angular">Angular</a></li>
+        <li><a class="skill-states" ui-sref="/skills.routing">Routing</a></li>
+        <li><a class="skill-states" ui-sref="/skills.mongodb">MongoDB</a></li>
+        <li><a class="skill-states" ui-sref="/skills.grunt">Grunt</a></li>
+        <li><a class="skill-states" ui-sref="/skills.angular">Angular</a></li>
     </ul>
     <div class="tabbed-view" ui-view></div>
 </div>
