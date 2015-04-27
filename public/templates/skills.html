@@ -33,12 +33,12 @@
 </header>
 <div ng-controller="TabController">
     <ul class="skills-nav">
-        <li><a class="skill-states" ui-sref="/skills.routing">Routing</a></li>
-        <li><a class="skill-states" ui-sref="/skills.mongodb">MongoDB</a></li>
-        <li><a class="skill-states" ui-sref="/skills.grunt">Grunt</a></li>
-        <li><a class="skill-states" ui-sref="/skills.angular">Angular</a></li>
+        <li><a class="skill-states" ui-sref="skills.routing">Routing</a></li>
+        <li><a class="skill-states" ui-sref="skills.mongodb">MongoDB</a></li>
+        <li><a class="skill-states" ui-sref="skills.grunt">Grunt</a></li>
+        <li><a class="skill-states" ui-sref="skills.angular">Angular</a></li>
     </ul>
-    <div class="tabbed-view" ui-view></div>
+    <div id="views-transistions" class="ui-view-container" ui-sref-active="active" ui-view></div>
 </div>
 <footer>
     <p class="footer-text">This Web Application was built by Thomas Greco using <a href="http://angularjs.com" target="_blank">AngularJS</a>, and runs top of the<a href="https://nodejs.org"> Node Platform</a>.</p>

@@ -64,7 +64,8 @@ angular.module('ui.router.config', ['ui.router'])
                     }
                 }
             })
-            .state('skills', {
+
+        .state('skills', {
                 abstract: true,
                 url: '/skills',
                 templateUrl: './templates/skills.html'
@@ -87,7 +88,7 @@ angular.module('ui.router.config', ['ui.router'])
             });
 
 
-            $locationProvider.html5Mode(true).hashPrefix('!')
+        $locationProvider.html5Mode(true).hashPrefix('!')
 
 
         //END ROUTE CONFIGURTATION

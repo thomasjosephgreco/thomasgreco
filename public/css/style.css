@@ -1609,13 +1609,57 @@ select {
   color: black;
 }
 
+/* line 1, ../sass/_ngAnimations.scss */
+.ui-view-container {
+  position: relative;
+  height: 200px;
+}
+/* line 4, ../sass/_ngAnimations.scss */
+.ui-view-container [ui-view]#view-transistions.ng-enter, .ui-view-container [ui-view]#view-transistions.ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+/* line 12, ../sass/_ngAnimations.scss */
+.ui-view-container [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter, .ui-view-container [ui-view]#view-transistions.ng-leave [ui-view]#view-transistions.ng-enter {
+  opacity: 0;
+  -webkit-transform: scale3d(0.5, 0.5, 0.5);
+  -moz-transform: scale3d(0.5, 0.5, 0.5);
+  transform: scale3d(0.5, 0.5, 0.5);
+}
+/* line 17, ../sass/_ngAnimations.scss */
+.ui-view-container [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter-active, .ui-view-container [ui-view]#view-transistions.ng-leave [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  -moz-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+/* line 22, ../sass/_ngAnimations.scss */
+.ui-view-container [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter-active [ui-view]#view-transistions.ng-leave, .ui-view-container [ui-view]#view-transistions.ng-leave [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter-active [ui-view]#view-transistions.ng-leave {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 27, ../sass/_ngAnimations.scss */
+.ui-view-container [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter-active [ui-view]#view-transistions.ng-leave [ui-view]#view-transistions.ng-leave-active, .ui-view-container [ui-view]#view-transistions.ng-leave [ui-view]#view-transistions.ng-enter [ui-view]#view-transistions.ng-enter-active [ui-view]#view-transistions.ng-leave [ui-view]#view-transistions.ng-leave-active {
+  opacity: 0;
+  -webkit-transform: translate3d(100px, 0, 0);
+  -moz-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0);
+}
+
 /* centered columns styles */
-/* line 16, ../sass/style.scss */
+/* line 17, ../sass/style.scss */
 .row-centered {
   text-align: center;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 .col-centered {
   display: inline-block;
   float: none;
@@ -1625,23 +1669,23 @@ select {
   margin-right: -4px;
 }
 
-/* line 31, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 .button-row {
   margin-bottom: 15px;
 }
 
-/* line 35, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 .panel .panel-primary {
   background: #051153;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 label {
   padding-top: 10px;
 }
 
 @media (min-width: 320px) {
-  /* line 44, ../sass/style.scss */
+  /* line 45, ../sass/style.scss */
   header {
     background-image: url("/images/nyc-60.jpg");
     background-size: cover;
@@ -1649,7 +1693,7 @@ label {
   }
 }
 @media (min-width: 760px) {
-  /* line 52, ../sass/style.scss */
+  /* line 53, ../sass/style.scss */
   header {
     background-image: url("/images/nyc-60.jpg");
     background-size: cover;
@@ -1657,18 +1701,18 @@ label {
   }
 }
 @media screen and (max-width: 669px) {
-  /* line 60, ../sass/style.scss */
+  /* line 61, ../sass/style.scss */
   .flex-nav {
     display: none;
   }
 
-  /* line 63, ../sass/style.scss */
+  /* line 64, ../sass/style.scss */
   .flex-nav-item > a {
     display: none;
   }
 }
 @media screen and (min-width: 670px) {
-  /* line 69, ../sass/style.scss */
+  /* line 70, ../sass/style.scss */
   .flex-nav {
     display: -webkit-flex;
     display: flex;
@@ -1681,7 +1725,7 @@ label {
     padding: 10px;
   }
 
-  /* line 78, ../sass/style.scss */
+  /* line 79, ../sass/style.scss */
   .flex-nav-item, .skills-nav .skill-states, .icon {
     -webkit-align-items: center;
     align-items: center;
@@ -1706,18 +1750,18 @@ label {
     color: black;
   }
 
-  /* line 89, ../sass/style.scss */
+  /* line 90, ../sass/style.scss */
   .flex-nav-item:hover {
     background-color: #aaa;
     text-decoration: none;
   }
 
-  /* line 96, ../sass/style.scss */
+  /* line 97, ../sass/style.scss */
   .flex-nav-item:active {
     font-weight: 700;
   }
 }
-/* line 102, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .skills-nav {
   display: -webkit-flex;
   display: flex;
@@ -1728,14 +1772,14 @@ label {
   height: 40px;
   padding: 10px;
 }
-/* line 109, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .skills-nav .skill-states {
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
 
 @media screen and (min-width: 670px) {
-  /* line 116, ../sass/style.scss */
+  /* line 117, ../sass/style.scss */
   .bottom-flex-nav {
     display: -webkit-flex;
     display: flex;
@@ -1744,7 +1788,7 @@ label {
     width: 100%;
   }
 
-  /* line 121, ../sass/style.scss */
+  /* line 122, ../sass/style.scss */
   .bottom-nav-items {
     -webkit-align-items: center;
     align-items: center;
@@ -1756,22 +1800,22 @@ label {
     padding: 5px 10px;
   }
 
-  /* line 131, ../sass/style.scss */
+  /* line 132, ../sass/style.scss */
   .bottom-nav-items:hover {
     background-color: #aaa;
   }
 
-  /* line 135, ../sass/style.scss */
+  /* line 136, ../sass/style.scss */
   .icon {
     -webkit-flex-grow: 1;
     flex-grow: 1;
   }
-  /* line 138, ../sass/style.scss */
+  /* line 139, ../sass/style.scss */
   .icon:hover {
     background-color: #aaa;
   }
 }
-/* line 144, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 #nav,
 .tinynav {
   display: none;
@@ -1779,7 +1823,7 @@ label {
 
 /* styles for mobile */
 @media screen and (max-width: 669px) {
-  /* line 151, ../sass/style.scss */
+  /* line 152, ../sass/style.scss */
   .nav-toggle {
     width: 100%;
     float: left;
@@ -1787,13 +1831,13 @@ label {
     margin-right: 0;
     background: white;
   }
-  /* line 154, ../sass/style.scss */
+  /* line 155, ../sass/style.scss */
   .nav-toggle .tinynav {
     display: block;
     width: 100%;
   }
 }
-/* line 161, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 a .button .button-border {
   width: 200px;
   margin-bottom: 20px;
