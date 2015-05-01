@@ -14,24 +14,19 @@ form.factory('Users', ['$http', function($http) {
     };
 }]);
 form.controller('MongooseController', ['$scope', '$http', 'Users', function($scope, $http, Users) {
-    $scope.formData = {};
-
-    // CREATE ==================================================================
-    // when submitting the add , send the text to the node API
+    var vm = this;
+    vm.formData = {};
     $scope.createUser = function() {
-
-
-        // validate the Data to make sure that something is there
-        // if  is empty, nothing will happen
         if ($scope.formData != undefined) {
-            // call the create function from our service (returns a promise object)
-            Users.create($scope.formData)
+            Users.create(vm.formData)
 
-            // if successful creation, call our get function to get all the new Users
-            .success(function(data) {
-                $scope.formData = {}; // clear the  so our user is ready to enter another
-                $scope.users = data; // assign our new list of Users
+            .success(function(data) { 
+                $scope.users = data;
+                $scope.formData = {}; 
+                $scope.myForm.$setPristine(true);
+       
             });
+
         }
     };
 }]);
