@@ -56,7 +56,7 @@ header {
     }
 }
 
-@media screen and (max-width: 669px) {
+@media screen and (device-aspect-ratio: 40/71) {
     footer {
         display: none;
     }
@@ -72,7 +72,7 @@ header {
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 669px) {
+@media screen and (device-aspect-ratio: 40/71)  {
     .logo-row {
         @include span(12);
         > img {

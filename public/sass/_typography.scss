@@ -13,14 +13,14 @@ body {
     font-family: $font-one;
 }
 h1 {
-    @include adjust-font-size-to(36px);
+    font-size: 2em;
     //Make the bottom margin 1 line-height / 36
-    margin-top: rhythm(1, 36px);
+    padding: rhythm(1, 36px);
     font-weight: $bold;
 }
 h2 {
-    @include adjust-font-size-to(24px);
-    margin-top: rhythm(1, 24px);
+    font-size: 1.5em;
+    padding: rhythm(1, 24px);
     font-weight: $bold;
     .main-heading {
         text-align: center;
@@ -42,15 +42,16 @@ h1.blue-head {
     color: #2b94c2;
 }
 h3 {
-    @include adjust-font-size-to(21px);
+    font-size: 1.25em;
     font-weight: $light;
     center {
         text-align: center
     }
 }
 p {
+    font-size: 1em;
     @include adjust-font-size-to(16px);
-    margin-bottom: rhythm(1, 16px);
+    padding: rhythm(1, 16px);
     font-weight: $light;
     text-align: justify;
     > em {
@@ -70,18 +71,18 @@ p {
 }
 
 .header-text {
-    @include adjust-font-size-to(18px);
+    font-size: 1.25em;
     margin-bottom: rhythm(1, 18px);
 }
 .quote-text {
-    @include adjust-font-size-to(22px);
-    margin-top: rhythm(1, 22px);
+    font-size: 1.25em;
+    padding: rhythm(1, 22px);
     margin-bottom: 5px;
     text-align: center;
     color: white;
 }
 .top-nav > li a {
-    @include adjust-font-size-to(18px);
+    font-size: 1.125em;
     padding-right: rhythm(1, 18px);
 }
 
@@ -105,7 +106,7 @@ li a {
 }
 
 .footer-text {
-    @include adjust-font-size-to(16px);
+    font-size: 1em;
     padding-top: rhythm(1, 16px);
     text-align: center;
     font-weight: $bold;

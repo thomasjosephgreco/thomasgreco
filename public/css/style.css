@@ -298,7 +298,7 @@ header {
     text-align: center;
   }
 }
-@media screen and (max-width: 669px) {
+@media screen and (device-aspect-ratio: 40 / 71) {
   /* line 60, ../sass/_grids.scss */
   footer {
     display: none;
@@ -321,7 +321,7 @@ header {
     height: 500px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 669px) {
+@media screen and (device-aspect-ratio: 40 / 71) {
   /* line 76, ../sass/_grids.scss */
   .logo-row {
     width: 100%;
@@ -1461,17 +1461,15 @@ body {
 
 /* line 15, ../sass/_typography.scss */
 h1 {
-  font-size: 2.25em;
-  line-height: 1.33333333em;
-  margin-top: 0.66666667em;
+  font-size: 2em;
+  padding: 0.66666667em;
   font-weight: 700;
 }
 
 /* line 21, ../sass/_typography.scss */
 h2 {
   font-size: 1.5em;
-  line-height: 2em;
-  margin-top: 1em;
+  padding: 1em;
   font-weight: 700;
 }
 /* line 25, ../sass/_typography.scss */
@@ -1501,8 +1499,7 @@ h1.blue-head {
 
 /* line 44, ../sass/_typography.scss */
 h3 {
-  font-size: 1.3125em;
-  line-height: 2.28571429em;
+  font-size: 1.25em;
   font-weight: 300;
 }
 /* line 47, ../sass/_typography.scss */
@@ -1513,98 +1510,95 @@ h3 center {
 /* line 51, ../sass/_typography.scss */
 p {
   font-size: 1em;
+  font-size: 1em;
   line-height: 1.5em;
-  margin-bottom: 1.5em;
+  padding: 1.5em;
   font-weight: 300;
   text-align: justify;
 }
-/* line 56, ../sass/_typography.scss */
+/* line 57, ../sass/_typography.scss */
 p > em {
   font-style: italic;
 }
 
-/* line 62, ../sass/_typography.scss */
+/* line 63, ../sass/_typography.scss */
 .about-intro {
   font-style: italic;
   text-align: justify;
   padding: 1em;
 }
 
-/* line 68, ../sass/_typography.scss */
+/* line 69, ../sass/_typography.scss */
 .lr-heading {
   text-align: center;
 }
 
-/* line 72, ../sass/_typography.scss */
+/* line 73, ../sass/_typography.scss */
 .header-text {
-  font-size: 1.125em;
-  line-height: 1.33333333em;
+  font-size: 1.25em;
   margin-bottom: 1.33333333em;
 }
 
-/* line 76, ../sass/_typography.scss */
+/* line 77, ../sass/_typography.scss */
 .quote-text {
-  font-size: 1.375em;
-  line-height: 2.18181818em;
-  margin-top: 1.09090909em;
+  font-size: 1.25em;
+  padding: 1.09090909em;
   margin-bottom: 5px;
   text-align: center;
   color: white;
 }
 
-/* line 83, ../sass/_typography.scss */
+/* line 84, ../sass/_typography.scss */
 .top-nav > li a {
   font-size: 1.125em;
-  line-height: 1.33333333em;
   padding-right: 1.33333333em;
 }
 
-/* line 88, ../sass/_typography.scss */
+/* line 89, ../sass/_typography.scss */
 .button {
   font-family: "Merriweather";
   font-weight: 700;
 }
 
-/* line 93, ../sass/_typography.scss */
+/* line 94, ../sass/_typography.scss */
 li a {
   text-decoration: none;
 }
 
-/* line 98, ../sass/_typography.scss */
+/* line 99, ../sass/_typography.scss */
 .form-wrapper h2 {
   text-align: center;
 }
 
-/* line 103, ../sass/_typography.scss */
+/* line 104, ../sass/_typography.scss */
 .main-heading {
   text-align: center;
 }
 
-/* line 107, ../sass/_typography.scss */
+/* line 108, ../sass/_typography.scss */
 .footer-text {
   font-size: 1em;
-  line-height: 1.5em;
   padding-top: 1.5em;
   text-align: center;
   font-weight: 700;
 }
 
-/* line 115, ../sass/_typography.scss */
+/* line 116, ../sass/_typography.scss */
 a .button .border-button {
   font-family: "Merriweather";
   font-weight: 700;
 }
-/* line 118, ../sass/_typography.scss */
+/* line 119, ../sass/_typography.scss */
 a .button .border-button:hover {
   text-decoration: none;
 }
 
-/* line 123, ../sass/_typography.scss */
+/* line 124, ../sass/_typography.scss */
 a:active {
   font-weight: 700;
 }
 
-/* line 130, ../sass/_typography.scss */
+/* line 131, ../sass/_typography.scss */
 select {
   color: black;
 }

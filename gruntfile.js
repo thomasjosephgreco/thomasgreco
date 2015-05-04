@@ -97,66 +97,60 @@ module.exports = function(grunt) {
                 **/
 
         // Javascript linting with jshint
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc'
-            },
-            all: [
-                './public/js/src/*.js'
-            ]
-        },
 
         // Concat & minify
-        uglify: {
-            dev: {
-                options: {
-                    mangle: false,
-                    compress: false,
-                    preserveComments: 'all',
-                    beautify: true
-                },
-                files: {
-                    './public/js/app.min.js': [
-                        './public/js/src/*.js'
-                    ]
-                }
+        ngAnnotate: {
+            options: {
+                singleQuotes: true,
             },
-            dist: {
-                options: {
-                    mangle: true,
-                    compress: true
-                },
+            app: {
                 files: {
-                    './public/js/app.min.js': [
-                        './public/js/src/*.js'
-                    ]
+                    './build/js/app.js': ['./public/js/app.js'],
+                    './build/js/form.js': ['./public/js/form.js'],
+                    './build/js/plugins.js': ['./public/js/plugins.js'],
+                    './build/js/routes.js': ['./public/js/routes.js'],
+                    './build/js/tabs.js': ['./public/js/tabs.js']
+
                 }
             }
         },
-
+        concat: {
+            js: {
+                src: ['./public/build/js/*.js'],
+                dest: './public/min/app.js'
+            }
+        },
+        uglify: {
+            js: {
+                src: ['./public/min/app.js'],
+                dest: './public/min/app.js'
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-express-server');
-    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-ng-annotate');
 
     grunt.registerTask('build', [
+        'concat',
         'jshint',
-        'uglify:dist',
-        'compass:dist'
+        'uglify:dest',
+        'compass:dest'
     ]);
 
     grunt.registerTask('default', [
         'jshint',
-        'uglify:dev',
         'compass:dev',
         'express:dev',
         'watch'
     ]);
 
-};
+}
+
+;
