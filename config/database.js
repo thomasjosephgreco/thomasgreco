@@ -1,5 +1,5 @@
 module.exports = {
 
 	// the database url to connect
-	url : 'mongodb://tg:beerdoc1@ds029630.mongolab.com:29630/user-db'
+	url : 'mongodb://tg:beerdoc@ds039020.mongolab.com:39020/thomasgreco'
 }
