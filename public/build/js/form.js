@@ -14,11 +14,12 @@ form.factory('Users', ['$http', function($http) {
     };
 }]);
 form.controller('MongooseController', ['$scope', '$http', 'Users', function($scope, $http, Users) {
-    var vm = this;
-    vm.formData = {};
+    
+
+    formData = {};
     $scope.createUser = function() {
         if ($scope.formData != undefined) {
-            Users.create(vm.formData)
+            Users.create($scope.formData)
 
             .success(function(data) { 
                 $scope.users = data;
