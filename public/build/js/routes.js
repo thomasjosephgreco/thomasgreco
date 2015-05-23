@@ -7,18 +7,18 @@ angular.module('ui.router.config', ['ui.router'])
                 url: '/',
                 views: {
                     '': {
-                        templateUrl: './templates/home.html'
+                        templateUrl: './templates/home/main.html'
                     },
                     'Header@home': {
-                        templateUrl: './templates/nav.html',
+                        templateUrl: './templates/assets/nav.html',
                         controller: 'NavController'
                     },
                     'Main-Content@home': {
-                        templateUrl: './templates/main-content.html',
+                        templateUrl: './templates/home/body-content.html',
                         controller: 'SliderController'
                     },
                     'Footer@home': {
-                        templateUrl: './templates/footer.html'
+                        templateUrl: './templates/assets/footer.html'
                     }
                 }
             })
@@ -26,21 +26,18 @@ angular.module('ui.router.config', ['ui.router'])
                 url: '/this-app',
                 views: {
                     '': {
-                        templateUrl: './templates/about.html'
+                        templateUrl: './templates/about/main.html'
                     },
                     'Header@about': {
-                        templateUrl: './templates/nav.html',
+                        templateUrl: './templates/assets/nav.html',
                         controller: 'NavController'
                     },
 
                     'Top-Content@about': {
-                        templateUrl: './templates/top-content.html'
-                    },
-                    'Bottom-Content@about': {
-                        templateUrl: './templates/bottom-content.html'
+                        templateUrl: './templates/about/top-content.html'
                     },
                     'Footer@about': {
-                        templateUrl: './templates/footer.html'
+                        templateUrl: './templates/assets/footer.html'
                     }
                 }
             })
@@ -48,19 +45,18 @@ angular.module('ui.router.config', ['ui.router'])
                 url: '/contact',
                 views: {
                     '': {
-                        templateUrl: './templates/contact.html'
+                        templateUrl: './templates/contact/main.html'
                     },
                     'Header@contact': {
-                        templateUrl: './templates/nav.html',
+                        templateUrl: './templates/assets/nav.html',
                         controller: 'NavController'
                     },
-
                     'Contact-Form@contact': {
-                        templateUrl: './templates/myForm.html',
+                        templateUrl: './templates/contact/myForm.html',
                         controller: 'MongooseController'
                     },
                     'Footer@contact': {
-                        templateUrl: './templates/footer.html'
+                        templateUrl: './templates/assets/footer.html'
                     }
                 }
             })
