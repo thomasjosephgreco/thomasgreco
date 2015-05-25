@@ -61,6 +61,26 @@ angular.module('ui.router.config', ['ui.router'])
                 }
             })
 
+            .state('blog', {
+                url: '/blog',
+                views: {
+                    '': {
+                        templateUrl: './templates/blog/main.html'
+                    },
+                    'Header@blog': {
+                        templateUrl: './templates/assets/nav.html',
+                        controller: 'NavController'
+                    },
+                    'Blogroll@blog': {
+                        templateUrl: './templates/blog/blogroll.html',
+                        controller: 'BlogController'
+                    },
+                    'Footer@blog': {
+                        templateUrl: './templates/assets/footer.html'
+                    }
+                }
+            })
+
         .state('skills', {
                 abstract: true,
                 url: '/skills',
