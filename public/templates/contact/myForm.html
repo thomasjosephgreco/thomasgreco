@@ -5,28 +5,28 @@
         <div class="row row-centered">
             <div class="col col-xs-12 col-md-9 col-centered">
                 <label for="name">Enter Your Name.</label>
-                <textarea class="form-control name" type="text" name="name" ng-model="formData.name" required></textarea>
-                <div ng-messages="myForm.name.$error" class="form-error" ng-if="myForm.name.$dirty">
-                    <div ng-message="required">This Field is Required</div>
+                <textarea class="form-control name" type="text" name="name" placeholder="Your Name" ng-model="formData.name" required></textarea>
+                <div ng-messages="myForm.name.$error" class="form-error-animation" ng-if="myForm.name.$dirty">
+                    <div ng-message="required" class="form-error-animation">This Field is Required</div>
                 </div>
             </div>
         </div>
         <div class="row row-centered">
             <div class="col-xs-12 col-md-9 col-centered">
                 <label for="email">Enter Your Email Address.</label>
-                <textarea class="form-control name" type="email" name="email" ng-model="formData.email" required></textarea>
-                <div ng-messages="myForm.email.$error" class="form-error" ng-if="myForm.email.$dirty">
-                    <div ng-message="required">This Field is Required</div>
-                    <div ng-message="email">Must be a valid email address.</div>
+                <textarea class="form-control name" type="email" name="email" placeholder="youremail@hotmail.com" ng-model="formData.email" required></textarea>
+                <div ng-messages="myForm.email.$error" class="form-error-animation" ng-if="myForm.email.$dirty">
+                    <div ng-message="required" class="form-error-animation">This Field is Required</div>
+                    <div ng-message="email" class="form-error-animation">Must be a valid email address.</div>
                 </div>
             </div>
         </div>
         <div class="row row-centered">
             <div class="col-xs-12 col-md-9 col-centered">
                 <label for="location">Where are you located?</label>
-                <textarea class="form-control name" type="text" name="location" ng-model="formData.location" required></textarea>
-                <div ng-messages="myForm.location.$error" class="form-error" ng-if="myForm.location.$dirty">
-                    <div ng-message="required">This Field is Required</div>
+                <textarea class="form-control name" type="text" placeholder="New York, NY"name="location" ng-model="formData.location" required></textarea>
+                <div ng-messages="myForm.location.$error" ng-if="myForm.location.$dirty">
+                    <div ng-message="required" class="form-error-animation">This Field is Required</div>
                 </div>
             </div>
         </div>
@@ -43,23 +43,23 @@
                 </div>
             </div>
         </div>
-         <div class="row row-centered">
+        <div class="row row-centered">
             <div class="col-xs-12 col-md-9 col-centered">
-                <label for="phoneNumber">Phone Number</label>
-                <textarea class="form-control name" type="text" name="phoneNumber" ng-model="formData.phoneNumber" required></textarea>
-                <div ng-messages="myForm.phoneNumber.$error" class="form-error" ng-if="myForm.phoneNumber.$dirty">
-                    <div ng-message="required">Must be a valid phone number</div>
+                <label for="phoneNumber">Phone Number (Must be formatted like placeholder):</label>
+                <textarea class="form-control name" type="text" name="phoneNumber" ng-model="formData.phoneNumber" required placeholder="XXX-XXX-XXXX"></textarea>
+                <div ng-messages="myForm.phoneNumber.$error" class="form-error-animation" ng-if="myForm.phoneNumber.$dirty">
+                    <div ng-message="required" class="form-error-animation">Must be a valid phone number</div>
                 </div>
             </div>
         </div>
         <div class="row row-centered">
             <div class="col-xs-12 col-md-9 col-centered">
                 <label for="message">Your reason for contacting me today?</label>
-                <textarea class="form-control name" type="text" name="message" ng-model="formData.message" required minlength="100" maxlength="1000"></textarea>
-                <div ng-messages="myForm.message.$error" class="form-error" ng-if="myForm.message.$dirty">
-                    <div ng-message="required">This Field is Required</div>
-                    <div ng-message="minlength">Elabortate a little more please.</div>
-                    <div ng-message="maxlength">You've Excited Your Character Number. Try making it a litle more concise</div>
+                <textarea class="form-control name" type="text" placeholder="It all begin on a cool October night....." name="message" ng-model="formData.message" required minlength="100" maxlength="1000"></textarea>
+                <div ng-messages="myForm.message.$error" class="form-error-animation" ng-if="myForm.message.$dirty">
+                    <div ng-message="required" class="form-error-animation">This Field is Required</div>
+                    <div ng-message="minlength" class="form-error-animation">Elabortate a little more please.</div>
+                    <div ng-message="maxlength" class="form-error-animation">You've Excited Your Character Number. Try making it a litle more concise</div>
                 </div>
             </div>
         </div>
