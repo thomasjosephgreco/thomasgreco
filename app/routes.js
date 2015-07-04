@@ -30,6 +30,7 @@ module.exports = function(app) {
 			email : req.body.email,
 			location : req.body.location,
 			reason : req.body.reason,
+			phoneNumber : req.body.phoneNumber,
 			message: req.body.message,
 			done : false
 		}, function(err, User) {

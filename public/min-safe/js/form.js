@@ -1,6 +1,6 @@
 var form = angular.module('form.config', [])
 
-form.factory('Users', function($http) {
+form.factory('Users', ['$http', function($http) {
     return {
         get: function() {
             return $http.get('/api/users');
@@ -12,8 +12,8 @@ form.factory('Users', function($http) {
             return $http.delete('/api/users/' + id);
         }
     };
-});
-form.controller('MongooseController', function($scope, $http, Users) {
+}]);
+form.controller('MongooseController', ['$scope', '$http', 'Users', function($scope, $http, Users) {
     var vm = this;
     vm.formData = {};
     $scope.createUser = function() {
@@ -29,4 +29,4 @@ form.controller('MongooseController', function($scope, $http, Users) {
 
         }
     };
-});
+}]);

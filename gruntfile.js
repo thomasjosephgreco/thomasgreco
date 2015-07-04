@@ -105,18 +105,18 @@ module.exports = function(grunt) {
             },
             app: {
                 files: {
-                    './build/js/app.js': ['./public/js/app.js'],
-                    './build/js/form.js': ['./public/js/form.js'],
-                    './build/js/plugins.js': ['./public/js/plugins.js'],
-                    './build/js/routes.js': ['./public/js/routes.js'],
-                    './build/js/tabs.js': ['./public/js/tabs.js']
+                    './public/min-safe/js/app.js': ['./public/js/app.js'],
+                    './public/min-safe/js/form.js': ['./public/js/form.js'],
+                    './public/min-safe/js/plugins.js': ['./public/js/plugins.js'],
+                    './public/min-safe/js/routes.js': ['./public/js/routes.js'],
+                    './public/min-safe/js/tabs.js': ['./public/js/tabs.js']
 
                 }
             }
         },
         concat: {
             js: {
-                src: ['./public/build/js/*.js'],
+                src: ['./public/min-safe/js/*.js'],
                 dest: './public/min/app.js'
             }
         },
@@ -137,7 +137,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-ng-annotate');
 
-    grunt.registerTask('build', [
+    grunt.registerTask('new', [
         'concat',
         'jshint',
         'uglify:dest',

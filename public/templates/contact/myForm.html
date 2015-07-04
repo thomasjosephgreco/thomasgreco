@@ -6,7 +6,7 @@
             <div class="col col-xs-12 col-md-9 col-centered">
                 <label for="name">Enter Your Name.</label>
                 <textarea class="form-control name" type="text" name="name" ng-model="formData.name" required></textarea>
-                <div ng-messages="myForm.name.$error" class="form-error"ng-if="myForm.name.$dirty">
+                <div ng-messages="myForm.name.$error" class="form-error" ng-if="myForm.name.$dirty">
                     <div ng-message="required">This Field is Required</div>
                 </div>
             </div>
@@ -27,7 +27,6 @@
                 <textarea class="form-control name" type="text" name="location" ng-model="formData.location" required></textarea>
                 <div ng-messages="myForm.location.$error" class="form-error" ng-if="myForm.location.$dirty">
                     <div ng-message="required">This Field is Required</div>
-                    <div ng-message="email">Must be a valid email address.</div>
                 </div>
             </div>
         </div>
@@ -44,6 +43,15 @@
                 </div>
             </div>
         </div>
+         <div class="row row-centered">
+            <div class="col-xs-12 col-md-9 col-centered">
+                <label for="phoneNumber">Phone Number</label>
+                <textarea class="form-control name" type="text" name="phoneNumber" ng-model="formData.phoneNumber" required></textarea>
+                <div ng-messages="myForm.phoneNumber.$error" class="form-error" ng-if="myForm.phoneNumber.$dirty">
+                    <div ng-message="required">Must be a valid phone number</div>
+                </div>
+            </div>
+        </div>
         <div class="row row-centered">
             <div class="col-xs-12 col-md-9 col-centered">
                 <label for="message">Your reason for contacting me today?</label>
@@ -56,6 +64,6 @@
             </div>
         </div>
         <div class="row row-centered button-row">
-            <a type="submit" ng-disabled="formData.$invalid" ng-click="createUser()"class="button button-border">Click Here to Submit</a></div>
-        <form>
+            <a type="submit" ng-disabled="formData.$invalid" ng-click="createUser()" class="button button-border">Click Here to Submit</a></div>
+    </form>
 </div>

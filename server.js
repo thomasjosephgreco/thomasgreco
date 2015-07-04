@@ -3,6 +3,7 @@ var express = require('express');
 var app = express(); // create our app w/ express
 var path = require('path');
 var mongoose = require('mongoose'); // mongoose for mongodb
+var validate = require('mongoose-validator');
 var port = process.env.PORT || 8080; // set the port
 var database = require('./config/database'); // load the database config
 var morgan = require('morgan');
@@ -10,12 +11,8 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var staticCache = require('express-static-cache');
 var favicon = require('serve-favicon');
-var ghost = require('ghost');
 
 
-ghost().then(function (ghostServer) {
-    ghostServer.start();
-});
 
 mongoose.connect(database.url); // connect to mongoDB database on modulus.io
 
